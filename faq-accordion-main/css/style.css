@@ -80,12 +80,12 @@ p {
 }
 
 .collapsible:after {
-  content: url(./assets/images/icon-plus.svg);
+  content: url(/faq-accordion-main/assets/images/icon-plus.svg);
   font-size: 13px;
   color: white;
   float: right;
   margin-left: 5px;
 }
 .active:after {
-  content: url(./assets/images/icon-minus.svg);
+  content: url(/faq-accordion-main/assets/images/icon-minus.svg);
 }
