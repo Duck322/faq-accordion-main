@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+/*==== variables ====*/
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --Pink: hsl(281, 83%, 54%);
+  font-family: Work Sans;
+}
+
+/* ==== reset ====*/
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background: var(--Light-pink);
+  background-image: url(../faq-accordion-main/assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: var(--White);
+  border-radius: 10px;
+  max-width: 37.5rem;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 3.25rem;
+  color: var(--Dark-purple);
+  font-weight: 700;
+}
+
+h1,
+img {
+  padding-right: 1.5rem;
+}
+
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  font-size: 1.125 rem;
+}
+
+button:hover {
+  color: var(--Pink);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--Dark-purple);
+}
+
+.collapsible:after {
+  content: url(./assets/images/icon-plus.svg);
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: url(./assets/images/icon-minus.svg);
+}
